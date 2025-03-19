@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" sizes="128x128" href="imgs/lj.png">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+    <title>Portfolio</title>
+</head>
+
+<body class="text-white bg-[#2D2D2D] relative">
+    <nav class="fixed top-0 left-0 right-0 bg-[#2D2D2D] shadow-lg z-50">
+        <div class="mr-10">
+            <div class="flex items-center justify-between h-16">
+                <div class="text-xl font-bold text-gray-800">
+                    <img src="imgs/likedjans.png" alt="likedjans" class="w-50 h-auto">
+                </div>
+
+                <!-- Mobile menu checkbox hack -->
+                <input type="checkbox" id="nav-toggle" class="hidden peer">
+                <label for="nav-toggle" class="md:hidden cursor-pointer">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </label>
+
+                <!-- Desktop menu -->
+                <div class="hidden md:flex md:items-center md:space-x-8">
+                    <a href="#home" class="group relative text-sky-50 hover:text-[#FF6200] transition-colors
+                        after:content-[''] after:absolute after:left-0 after:-bottom-1 py-3 after:w-full after:h-[2px] 
+                        after:bg-[#FF6200] after:origin-left after:scale-x-0 after:transition-transform 
+                        after:duration-300 after:ease-in-out hover:after:scale-x-100">
+                        Home
+                    </a>
+
+                    <a href="#about" class="group relative text-sky-50 hover:text-[#FF6200] transition-colors 
+                        after:content-[''] after:absolute after:left-0 after:-bottom-5 after:w-full after:h-[2px] 
+                        after:bg-[#FF6200] after:origin-left after:scale-x-0 after:transition-transform 
+                        after:duration-300 after:ease-in-out hover:after:scale-x-100">
+                        About
+                    </a>
+
+                    <a href="#project" class="group relative text-sky-50 hover:text-[#FF6200] transition-colors 
+                        after:content-[''] after:absolute after:left-0 after:-bottom-1 py-3 after:w-full after:h-[2px] 
+                        after:bg-[#FF6200] after:origin-left after:scale-x-0 after:transition-transform 
+                        after:duration-300 after:ease-in-out hover:after:scale-x-100">
+                        Projects
+                    </a>
+
+                    <a href="#contact" class="group relative text-sky-50 hover:text-[#FF6200] transition-colors 
+                        after:content-[''] after:absolute after:left-0 after:-bottom-1 py-3 after:w-full after:h-[2px] 
+                        after:bg-[#FF6200] after:origin-left after:scale-x-0 after:transition-transform 
+                        after:duration-300 after:ease-in-out hover:after:scale-x-100">
+                        Contact
+                    </a>
+
+
+                </div>
+
+                <!-- Mobile menu -->
+                <div class="hidden peer-checked:block md:hidden absolute top-16 left-0 right-0 bg-[#2D2D2D] shadow-lg">
+                    <div class="px-2 pt-2 pb-3 space-y-1 md:hidden">
+                        <a href="#home"
+                            class="block px-3 py-2 text-sky-50 hover:text-[#FF6200] hover:bg-gray-50 rounded-md">Home</a>
+                        <a href="#about"
+                            class="block px-3 py-2 text-sky-50 hover:text-[#FF6200] hover:bg-gray-50 rounded-md">About</a>
+                        <a href="#porfolio"
+                            class="block px-3 py-2 text-sky-50 hover:text-[#FF6200] hover:bg-gray-50 rounded-md">Projects</a>
+                        <a href="#contact"
+                            class="block px-3 py-2 text-sky-50 hover:text-[#FF6200] hover:bg-gray-50 rounded-md">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="flex flex-col gap-6">
+        <section id="home" class="flex items-center justify-between pt-[80px] sm:pt-[1px]">
+            <div class="flex w-[100%]">
+                <div class="flex flex-col gap-10 items-center justify-center pl-3 pr-6">
+                    <a href="https://www.facebook.com/LikedJans" target="_blank" class="cursor-pointer"><i
+                            class="fa-brands fa-facebook text-[#FF6200] fs-4"></i></a>
+                    <a href="https://x.com/LikedJans12" target="_blank"><i
+                            class="fa-brands fa-twitter text-[#FF6200] fs-4"></i></a>
+                    <a href="https://github.com/romerojanssen09" target="_blank"><i
+                            class="fa-brands fa-github text-[#FF6200] fs-4"></i></a>
+                    <a href="https://www.instagram.com/likedjans/" target="_blank"><i
+                            class="fa-brands fa-instagram text-[#FF6200] fs-4"></i></a>
+                </div>
+                <div class="flex flex-col gap-2 justify-center w-[50%] sm:w-[100%]">
+                    <p class="text-2xl">Hello, I'm</p>
+                    <p class="text-4xl font-bold">Janssen Rey E. Romero</p>
+                    <p class="text-[#FF6200] text-2xl">Software Developer</p>
+                    <div class="py-2 flex flex-col sm:flex-row">
+                        <a href="#contact"
+                            class="btn bg-[#FF6200] text-white px-8 py-2 border-2 hover:border-[#FF6200] border-[#FF6200]">Say
+                            Hello
+                            <i class="fa-solid fa-envelope ml-1" style="color: #ffffff;"></i>
+                        </a>
+                        <a href="#about" class="btn text-white hover:underline">About me</a>
+                    </div>
+                </div>
+            </div>
+            <img class="w-[40%] hidden sm:block" src="imgs/IMG_20250227_180714_949-removebg-preview.png" alt="">
+        </section>
+        <section class="bg-[#505050] p-5 flex fs-6" id="about">
+            <div class="container">
+                <h2 class="text-3xl font-bold mb-4">About Me</h2>
+                <p class="mb-2">I'm <span class="font-semibold text-[#FF6200]">Janssen</span>, a passionate Software
+                    Developer with a
+                    love for creating innovative solutions.</p>
+                <p class="mb-2">I hold a degree in Information System and have experience in both front-end and back-end
+                    development.</p>
+                <p class="mb-2">My skills include <span class="text-[#FF6200]">HTML</span>, <span
+                        class="text-[#FF6200]">CSS</span>, <span class="text-[#FF6200]">JavaScript</span>, <span
+                        class="text-[#FF6200]">PHP</span>, and I specialize in using the <span
+                        class="text-[#FF6200]">Laravel</span>
+                    framework for building robust applications.</p>
+                <p class="mb-2">In my free time, I love exploring new technologies and contributing to open-source
+                    projects.</p>
+                <p class="mb-4">My goal is to continuously improve my skills and work on projects that make a
+                    difference.</p>
+                <h3 class="text-2xl font-bold mb-2">Projects & Technologies</h3>
+                <ul class="list-disc ml-5 mb-4">
+                    <li><a href="#" class="hover:underline hover:text-[#FF6200]">JavaScript WebRTC</a> -
+                        A real-time communication application built using WebRTC technology.</li>
+                    <li><a href="#" class="hover:underline hover:text-[#FF6200]">Portfolio Website</a> -
+                        A responsive website showcasing my work and skills.</li>
+                    <li><a target="_blank" href="https://bagocitydigitaljobportal.bccbsis.com/capstone/"
+                            class="hover:underline hover:text-[#FF6200]">Online Job Portal</a> - A capstone project
+                        featuring geospatial analysis and smart recommendations.
+                    </li>
+                </ul>
+                <a href="docs/Copy of Grey Modern Professional CV Resume (1).pdf" download>
+                    <button class="btn bg-[#FF6200] hover:border-[#FF6200] border-2 text-white group">
+                        <span class="group-hover:text-[#FF6200]">Download CV</span>
+                        <i class="fa-solid fa-down-long group-hover:text-[#FF6200]"></i>
+                    </button>
+                </a>
+            </div>
+            <img src="imgs/janss.png" alt="me as icon" class="hidden md:block w-[80%] h-auto">
+        </section>
+        <section class="text-black" id="project">
+            <div class="container mx-auto px-4 py-16">
+                <h2 class="text-3xl font-bold text-center text-white mb-12">Featured Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div class="relative">
+                            <img src="imgs/capstone.png" alt="Project 1" class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
+                            <div class="absolute top-0 right-0 m-4">
+                                <span class="bg-[#FF6200] text-white px-3 py-1 rounded-full text-sm">Featured</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 hover:text-opacity-80 transition-colors">E-Commerce Platform</h3>
+                            <p class="opacity-80 mb-4 line-clamp-2">A full-stack e-commerce solution with modern UI/UX design principles.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-[#FF6200] bg-opacity-20 rounded-full text-sm hover:bg-opacity-30 transition-colors">Php</span>
+                                <span class="px-3 py-1 bg-[#FF6200] bg-opacity-20 rounded-full text-sm hover:bg-opacity-30 transition-colors">Js</span>
+                                <span class="px-3 py-1 bg-[#FF6200] bg-opacity-20 rounded-full text-sm hover:bg-opacity-30 transition-colors">MySql</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <a href="https://bagocitydigitaljobportal.bccbsis.com/capstone/" target="_blank" class="inline-block px-6 py-2 bg-[#FF6200] text-[var(--bg-color)] rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:-translate-y-1">View Project</a>
+                                <div class="flex gap-2">
+                                    <a href="#" class="text-[#FF6200] hover:text-opacity-80 transition-colors">
+                                        <i class="fas fa-code"></i>
+                                    </a>
+                                    <a href="#" class="text-[#FF6200] hover:text-opacity-80 transition-colors">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Project Card 2 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div class="relative">
+                            <img src="https://philnews.ph/wp-content/uploads/2019/08/Dr.-Jose-P.-Rizal.jpg" alt="Project 2" class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 hover:text-opacity-80 transition-colors">Tribute Page</h3>
+                            <p class="opacity-80 mb-4 line-clamp-2">A tribute page dedicated to Dr. Jose Rizal, showcasing his life and
+                                contributions.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-[#FF6200] bg-opacity-20 rounded-full text-sm hover:bg-opacity-30 transition-colors">HTML</span>
+                                <span class="px-3 py-1 bg-[#FF6200] bg-opacity-20 rounded-full text-sm hover:bg-opacity-30 transition-colors">CSS</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <a href="building a Tribute Page/Tribute_Page.html" target="_blank" class="inline-block px-6 py-2 bg-[#FF6200] text-[var(--bg-color)] rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:-translate-y-1">View Project</a>
+                                <div class="flex gap-2">
+                                    <a href="#" class="text-[#FF6200] hover:text-opacity-80 transition-colors">
+                                        <i class="fas fa-code"></i>
+                                    </a>
+                                    <a href="#" class="text-[#FF6200] hover:text-opacity-80 transition-colors">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Project Card 3 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div class="relative">
+                            <img src="imgs/coffee-cup-clipart-generative-ai-png.webp" alt="Project 2" class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 hover:text-opacity-80 transition-colors">Product Landing Page</h3>
+                            <p class="opacity-80 mb-4 line-clamp-2">A responsive landing page designed for a coffee product, highlighting its
+                                features.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-[#FF6200] bg-opacity-20 rounded-full text-sm hover:bg-opacity-30 transition-colors">HTML</span>
+                                <span class="px-3 py-1 bg-[#FF6200] bg-opacity-20 rounded-full text-sm hover:bg-opacity-30 transition-colors">CSS</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <a href="product landing page/index.html" target="_blank" class="inline-block px-6 py-2 bg-[#FF6200] text-[var(--bg-color)] rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:-translate-y-1">View Project</a>
+                                <div class="flex gap-2">
+                                    <a href="#" class="text-[#FF6200] hover:text-opacity-80 transition-colors">
+                                        <i class="fas fa-code"></i>
+                                    </a>
+                                    <a href="#" class="text-[#FF6200] hover:text-opacity-80 transition-colors">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-[#505050] text-white py-10" id="contact">
+            <div class="">
+                <div>
+                    <h2 class="text-3xl font-bold mb-4 text-center">Get in Touch</h2>
+                    <h3 class="text-2xl font-bold mb-4 text-center">Connect with Me with Confidence</h3>
+                </div>
+                <div class="flex lg:container flex-col md:flex-row">
+                    <div class="w-[100%] lg:px-20 sm:px-10">
+                        <div class="">
+                            <p class="text-center mb-4 px-4">Please fill out the form on this section to contact with me. Or
+                                call
+                                between
+                                9:00 a.m. and 8:00 p.m. PH, Monday through Friday.</p>
+                            <div class="mb-4 flex justify-center">
+                                <div class="w-fit flex flex-col gap-2">
+                                    <p class="fs-6 flex gap-2"><i class="fa-solid fa-phone size-1 mr-4"></i> <span class="text-[#FF6200]">09564186361</span></p>
+                                    <p class="fs-6 flex gap-2"><i class="fa-solid fa-envelope size-1 mr-4 mt-1"></i> <span class="text-[#FF6200]">romerojanssen09@gmail.com</span></p>
+                                    <p class="fs-6 flex gap-2"><i class="fa-solid fa-location-dot size-1 mr-4 mt-1"></i> <span class="text-[#FF6200]">Bacolod City, 6100</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="w-[100%] px-[20px]">
+                        <div class="mb-3"> 
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control outline-none" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Your Phone</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea class="form-control resize-none" id="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn bg-[#FF6200] text-sky-50 border-orange-600 hover:border-[#FF6200] w-[100%] md:w-[50%] lg:w-[40%]">Submit
+                            Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <a href="#home"
+        class="btn bg-[#FF6200] hover:border-[#FF6200] border-2 position-fixed bottom-8 end-8 p-2 px-3 text-white rounded-pill group">
+        <i class="fa-solid fa-arrow-up group-hover:text-[#FF6200]"></i>
+    </a>
+    <footer class="pt-3 pb-2">
+        <div class="container px-20 text-center text-white">
+            &copy; 2025 All rights reserved. Designed by <span class="text-[#FF6200]">Janssen Rey Romero</span>
+        </div>
+        <div class="flex flex-row gap-10 justify-center pt-2">
+            <a href="https://www.facebook.com/LikedJans" target="_blank" class="cursor-pointer"><i
+                    class="fa-brands fa-facebook text-[#FF6200] fs-4"></i></a>
+            <a href="https://x.com/LikedJans12" target="_blank"><i
+                    class="fa-brands fa-twitter text-[#FF6200] fs-4"></i></a>
+            <a href="https://github.com/romerojanssen09" target="_blank"><i
+                    class="fa-brands fa-github text-[#FF6200] fs-4"></i></a>
+            <a href="https://www.instagram.com/likedjans/" target="_blank"><i
+                    class="fa-brands fa-instagram text-[#FF6200] fs-4"></i></a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
