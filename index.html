@@ -24,6 +24,23 @@
         body {
             font-family: 'Poppins', sans-serif;
         }
+        .nav-active, .nav-active:hover {
+            color: #FF6200 !important;
+        }
+        .nav-underline {
+            position: relative;
+        }
+        .nav-underline.nav-active::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 100%;
+            height: 2px;
+            background: #FF6200;
+            border-radius: 2px;
+            transition: width 0.3s;
+        }
     </style>
     <title>Portfolio</title>
 </head>
@@ -47,35 +64,42 @@
 
                 <!-- Desktop menu -->
                 <div class="hidden md:flex md:items-center md:space-x-8">
-                    <a href="#home" class="group relative text-sky-50 hover:text-[#FF6200] transition-colors
-                        after:content-[''] after:absolute after:left-0 after:-bottom-1 py-3 after:w-full after:h-[2px] 
-                        after:bg-[#FF6200] after:origin-left after:scale-x-0 after:transition-transform 
+                    <a href="#home" class="nav-link nav-underline group relative text-sky-50 hover:text-[#FF6200] transition-colors
+                        after:content-[''] after:absolute after:left-0 after:-bottom-1 py-3 after:w-full after:h-[2px]
+                        after:bg-[#FF6200] after:origin-left after:scale-x-0 after:transition-transform
                         after:duration-300 after:ease-in-out hover:after:scale-x-100">
                         Home
                     </a>
-
-                    <a href="#about" class="group relative text-sky-50 hover:text-[#FF6200] transition-colors 
-                        after:content-[''] after:absolute after:left-0 after:-bottom-5 after:w-full after:h-[2px] 
-                        after:bg-[#FF6200] after:origin-left after:scale-x-0 after:transition-transform 
+                    <a href="#skills" class="nav-link nav-underline group relative text-sky-50 hover:text-[#FF6200] transition-colors
+                        after:content-[''] after:absolute after:left-0 after:-bottom-1 py-3 after:w-full after:h-[2px]
+                        after:bg-[#FF6200] after:origin-left after:scale-x-0 after:transition-transform
+                        after:duration-300 after:ease-in-out hover:after:scale-x-100">
+                        Skills
+                    </a>
+                    <a href="#about" class="nav-link nav-underline group relative text-sky-50 hover:text-[#FF6200] transition-colors
+                        after:content-[''] after:absolute after:left-0 after:-bottom-5 after:w-full after:h-[2px]
+                        after:bg-[#FF6200] after:origin-left after:scale-x-0 after:transition-transform
                         after:duration-300 after:ease-in-out hover:after:scale-x-100">
                         About
                     </a>
-
-                    <a href="#project" class="group relative text-sky-50 hover:text-[#FF6200] transition-colors 
-                        after:content-[''] after:absolute after:left-0 after:-bottom-1 py-3 after:w-full after:h-[2px] 
-                        after:bg-[#FF6200] after:origin-left after:scale-x-0 after:transition-transform 
+                    <a href="#project" class="nav-link nav-underline group relative text-sky-50 hover:text-[#FF6200] transition-colors
+                        after:content-[''] after:absolute after:left-0 after:-bottom-1 py-3 after:w-full after:h-[2px]
+                        after:bg-[#FF6200] after:origin-left after:scale-x-0 after:transition-transform
                         after:duration-300 after:ease-in-out hover:after:scale-x-100">
                         Projects
                     </a>
-
-                    <a href="#contact" class="group relative text-sky-50 hover:text-[#FF6200] transition-colors 
-                        after:content-[''] after:absolute after:left-0 after:-bottom-1 py-3 after:w-full after:h-[2px] 
-                        after:bg-[#FF6200] after:origin-left after:scale-x-0 after:transition-transform 
+                    <a href="#certifications" class="nav-link nav-underline group relative text-sky-50 hover:text-[#FF6200] transition-colors
+                        after:content-[''] after:absolute after:left-0 after:-bottom-1 py-3 after:w-full after:h-[2px]
+                        after:bg-[#FF6200] after:origin-left after:scale-x-0 after:transition-transform
+                        after:duration-300 after:ease-in-out hover:after:scale-x-100">
+                        Certifications
+                    </a>
+                    <a href="#contact" class="nav-link nav-underline group relative text-sky-50 hover:text-[#FF6200] transition-colors
+                        after:content-[''] after:absolute after:left-0 after:-bottom-1 py-3 after:w-full after:h-[2px]
+                        after:bg-[#FF6200] after:origin-left after:scale-x-0 after:transition-transform
                         after:duration-300 after:ease-in-out hover:after:scale-x-100">
                         Contact
                     </a>
-
-
                 </div>
 
                 <!-- Mobile menu -->
@@ -83,10 +107,14 @@
                     <div class="px-2 pt-2 pb-3 space-y-1 md:hidden">
                         <a href="#home"
                             class="block px-3 py-2 text-sky-50 hover:text-[#FF6200] hover:bg-gray-50 rounded-md">Home</a>
+                        <a href="#skills"
+                            class="block px-3 py-2 text-sky-50 hover:text-[#FF6200] hover:bg-gray-50 rounded-md">Skills</a>
                         <a href="#about"
                             class="block px-3 py-2 text-sky-50 hover:text-[#FF6200] hover:bg-gray-50 rounded-md">About</a>
                         <a href="#project"
                             class="block px-3 py-2 text-sky-50 hover:text-[#FF6200] hover:bg-gray-50 rounded-md">Projects</a>
+                        <a href="#certifications"
+                            class="block px-3 py-2 text-sky-50 hover:text-[#FF6200] hover:bg-gray-50 rounded-md">Certifications</a>
                         <a href="#contact"
                             class="block px-3 py-2 text-sky-50 hover:text-[#FF6200] hover:bg-gray-50 rounded-md">Contact</a>
                     </div>
@@ -123,42 +151,57 @@
             </div>
             <img class="w-[40%] hidden sm:block" src="imgs/IMG_20250227_180714_949-removebg-preview.png" alt="">
         </section>
-        <section class="bg-[#505050] p-4  flex fs-6" id="about">
-            <div class="md:p-5">
-                <h2 class="text-3xl font-bold mb-4">About Me</h2>
-                <p class="mb-2">I'm <span class="font-semibold text-[#FF6200]">Janssen</span>, a passionate Software
-                    Developer with a
-                    love for creating innovative solutions.</p>
-                <p class="mb-2">I hold a degree in Information System and have experience in both front-end and back-end
-                    development.</p>
-                <p class="mb-2">My skills include <span class="text-[#FF6200]">HTML</span>, <span
-                        class="text-[#FF6200]">CSS</span>, <span class="text-[#FF6200]">JavaScript</span>, <span
-                        class="text-[#FF6200]">PHP</span>, and I specialize in using the <span
-                        class="text-[#FF6200]">Laravel</span>
-                    framework for building robust applications.</p>
-                <p class="mb-2">In my free time, I love exploring new technologies and contributing to open-source
-                    projects.</p>
-                <p class="mb-4">My goal is to continuously improve my skills and work on projects that make a
-                    difference.</p>
-                <h3 class="text-2xl font-bold mb-2">Projects & Technologies</h3>
-                <ul class="list-disc ml-5 mb-4">
-                    <li><a href="#" class="hover:underline hover:text-[#FF6200]">JavaScript WebRTC</a> -
-                        A real-time communication application built using WebRTC technology.</li>
-                    <li><a href="#" class="hover:underline hover:text-[#FF6200]">Portfolio Website</a> -
-                        A responsive website showcasing my work and skills.</li>
-                    <li><a target="_blank" href="https://bagocitydigitaljobportal.bccbsis.com/capstone/"
-                            class="hover:underline hover:text-[#FF6200]">Online Job Portal</a> - A capstone project
-                        featuring geospatial analysis and smart recommendations.
-                    </li>
-                </ul>
-                <a href="docs/Copy of Grey Modern Professional CV Resume (1).pdf" download>
-                    <button class="btn bg-[#FF6200] hover:border-[#FF6200] border-2 text-white group">
-                        <span class="group-hover:text-[#FF6200]">Download CV</span>
-                        <i class="fa-solid fa-down-long group-hover:text-[#FF6200]"></i>
-                    </button>
-                </a>
+        <section id="skills" class="py-16 bg-[#222] text-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-8">Skills</h2>
+                <div class="flex flex-wrap justify-center gap-8">
+                    <div class="flex flex-col items-center">
+                        <i class="fab fa-html5 text-5xl text-[#E34F26]"></i>
+                        <span class="mt-2">HTML5</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="fab fa-css3-alt text-5xl text-[#1572B6]"></i>
+                        <span class="mt-2">CSS3</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="fab fa-js-square text-5xl text-[#F7DF1E]"></i>
+                        <span class="mt-2">JavaScript</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="fab fa-java text-5xl text-[#007396]"></i>
+                        <span class="mt-2">Java</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="fas fa-code text-5xl text-[#512BD4]"></i>
+                        <span class="mt-2">C# (.NET)</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="fab fa-php text-5xl text-[#777BB4]"></i>
+                        <span class="mt-2">PHP (Laravel)</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="fas fa-gamepad text-5xl text-[#222]"></i>
+                        <span class="mt-2">C# (Unity)</span>
+                    </div>
+                </div>
             </div>
-            <img src="imgs/janss.png" alt="me as icon" class="hidden md:block w-[80%] h-auto">
+        </section>
+        <section id="about" class="py-16 bg-[#2D2D2D] text-white">
+            <div class="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-12">
+                <div class="flex-1 flex justify-center">
+                    <img src="imgs/lj.png" alt="Profile Photo" class="rounded-full w-48 h-48 object-cover shadow-lg border-4 border-[#FF6200]">
+                </div>
+                <div class="flex-1">
+                    <h2 class="text-3xl font-bold mb-4">About Me</h2>
+                    <p class="mb-4 text-lg">Hi! I’m a passionate and results-driven programmer with expertise in building scalable web applications and solving complex problems. I thrive in collaborative environments and love learning new technologies. My philosophy: <span class="italic text-[#FF6200]">“Code is poetry.”</span></p>
+                    <ul class="mb-4">
+                        <li><strong>Experience:</strong> 3+ years in software development</li>
+                        <li><strong>Specialties:</strong> Full-stack development, clean code, agile teamwork</li>
+                        <li><strong>Interests:</strong> Open source, AI, UI/UX, automation</li>
+                    </ul>
+                    <a href="#" class="inline-block bg-[#FF6200] text-white px-6 py-2 rounded-full shadow hover:bg-[#ff8533] transition">Download Resume</a>
+                </div>
+            </div>
         </section>
         <section class="text-black" id="project">
             <div class="container mx-auto px-4 py-16">
@@ -168,130 +211,81 @@
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl">
                         <div class="relative">
                             <img src="imgs/capstone.png" alt="Project 1" class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
-                            <div class="absolute top-0 right-0 m-4">
-                                <span class="bg-[#FF6200] text-white px-3 py-1 rounded-full text-sm">Featured</span>
-                            </div>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 hover:text-opacity-80 transition-colors">E-Commerce Platform</h3>
-                            <p class="opacity-80 mb-4 line-clamp-2">A full-stack e-commerce solution with modern UI/UX design principles.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-[#FF6200] bg-opacity-20 rounded-full text-sm hover:bg-opacity-30 transition-colors">Php</span>
-                                <span class="px-3 py-1 bg-[#FF6200] bg-opacity-20 rounded-full text-sm hover:bg-opacity-30 transition-colors">Js</span>
-                                <span class="px-3 py-1 bg-[#FF6200] bg-opacity-20 rounded-full text-sm hover:bg-opacity-30 transition-colors">MySql</span>
+                            <h3 class="text-xl font-semibold mb-2">Capstone Project</h3>
+                            <p class="mb-2">A comprehensive web application demonstrating advanced frontend and backend integration.</p>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="bg-[#FF6200] text-white px-2 py-1 rounded text-xs">Leaflet</span>
+                                <span class="bg-[#222] text-white px-2 py-1 rounded text-xs">HTML5</span>
+                                <span class="bg-[#3776AB] text-white px-2 py-1 rounded text-xs">PHP</span>
                             </div>
-                            <div class="flex justify-between items-center">
-                                <a href="https://bagocitydigitaljobportal.bccbsis.com/capstone/" target="_blank" class="inline-block px-6 py-2 bg-[#FF6200] text-[var(--bg-color)] rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:-translate-y-1">View Project</a>
-                                <div class="flex gap-2">
-                                    <a href="#" class="text-[#FF6200] hover:text-opacity-80 transition-colors">
-                                        <i class="fas fa-code"></i>
-                                    </a>
-                                    <a href="#" class="text-[#FF6200] hover:text-opacity-80 transition-colors">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                </div>
-                            </div>
+                            <a href="#" class="text-[#FF6200] hover:underline mr-4"><i class="fab fa-github"></i>GitHub</a>
+                            <a href="https://bagocitydigitaljobportal.bccbsis.com/capstone/" class="text-[#FF6200] hover:underline"><i class="fa fa-external-link-alt"></i>Live Demo</a>
                         </div>
                     </div>
-    
                     <!-- Project Card 2 -->
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                        <div class="relative">
-                            <img src="https://philnews.ph/wp-content/uploads/2019/08/Dr.-Jose-P.-Rizal.jpg" alt="Project 2" class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 hover:text-opacity-80 transition-colors">Tribute Page</h3>
-                            <p class="opacity-80 mb-4 line-clamp-2">A tribute page dedicated to Dr. Jose Rizal, showcasing his life and
-                                contributions.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-[#FF6200] bg-opacity-20 rounded-full text-sm hover:bg-opacity-30 transition-colors">HTML</span>
-                                <span class="px-3 py-1 bg-[#FF6200] bg-opacity-20 rounded-full text-sm hover:bg-opacity-30 transition-colors">CSS</span>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <a href="building a Tribute Page/Tribute_Page.html" target="_blank" class="inline-block px-6 py-2 bg-[#FF6200] text-[var(--bg-color)] rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:-translate-y-1">View Project</a>
-                                <div class="flex gap-2">
-                                    <a href="#" class="text-[#FF6200] hover:text-opacity-80 transition-colors">
-                                        <i class="fas fa-code"></i>
-                                    </a>
-                                    <a href="#" class="text-[#FF6200] hover:text-opacity-80 transition-colors">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <!-- Project Card 3 -->
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl">
                         <div class="relative">
                             <img src="imgs/coffee-cup-clipart-generative-ai-png.webp" alt="Project 2" class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 hover:text-opacity-80 transition-colors">Product Landing Page</h3>
-                            <p class="opacity-80 mb-4 line-clamp-2">A responsive landing page designed for a coffee product, highlighting its
-                                features.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-[#FF6200] bg-opacity-20 rounded-full text-sm hover:bg-opacity-30 transition-colors">HTML</span>
-                                <span class="px-3 py-1 bg-[#FF6200] bg-opacity-20 rounded-full text-sm hover:bg-opacity-30 transition-colors">CSS</span>
+                            <h3 class="text-xl font-semibold mb-2">Coffee Shop Landing Page</h3>
+                            <p class="mb-2">A modern, responsive landing page for a local coffee shop, featuring interactive UI elements.</p>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="bg-[#E34F26] text-white px-2 py-1 rounded text-xs">HTML5</span>
+                                <span class="bg-[#1572B6] text-white px-2 py-1 rounded text-xs">CSS3</span>
+                                <span class="bg-[#F7DF1E] text-black px-2 py-1 rounded text-xs">JavaScript</span>
                             </div>
-                            <div class="flex justify-between items-center">
-                                <a href="product landing page/index.html" target="_blank" class="inline-block px-6 py-2 bg-[#FF6200] text-[var(--bg-color)] rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:-translate-y-1">View Project</a>
-                                <div class="flex gap-2">
-                                    <a href="#" class="text-[#FF6200] hover:text-opacity-80 transition-colors">
-                                        <i class="fas fa-code"></i>
-                                    </a>
-                                    <a href="#" class="text-[#FF6200] hover:text-opacity-80 transition-colors">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                </div>
-                            </div>
+                            <a href="#" class="text-[#FF6200] hover:underline mr-4"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="product landing page/" class="text-[#FF6200] hover:underline"><i class="fa fa-external-link-alt"></i> Live Demo</a>
                         </div>
                     </div>
+                    <!-- Add more project cards as needed -->
                 </div>
             </div>
         </section>
+        <section id="certifications" class="py-16 bg-[#222] text-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-8">Certifications & Achievements</h2>
+                <ul class="list-disc list-inside max-w-xl mx-auto text-lg">
+                    <!-- <li>Certified JavaScript Developer – Example Institute</li> -->
+                    <li>Responsive Web Design Certification – freeCodeCamp</li>
+                    <!-- <li>Python for Everybody – Coursera</li> -->
+                    <!-- Add more certifications as needed -->
+                </ul>
+            </div>
+        </section>
         <section class="bg-[#505050] text-white py-10" id="contact">
-            <div class="">
+            <div class="container mx-auto px-4">
                 <div>
                     <h2 class="text-3xl font-bold mb-4 text-center">Get in Touch</h2>
-                    <h3 class="text-2xl font-bold mb-4 text-center">Connect with Me with Confidence</h3>
-                </div>
-                <div class="flex lg:container flex-col md:flex-row">
-                    <div class="w-[100%] lg:px-20 sm:px-10">
-                        <div class="">
-                            <p class="text-center mb-4 px-4">Please fill out the form on this section to contact with me. Or
-                                call
-                                between
-                                9:00 a.m. and 8:00 p.m. PH, Monday through Friday.</p>
-                            <div class="mb-4 flex justify-center">
-                                <div class="w-fit flex flex-col gap-2">
-                                    <p class="fs-6 flex gap-2"><i class="fa-solid fa-phone size-1 mr-4"></i> <span class="text-[#FF6200]">09564186361</span></p>
-                                    <p class="fs-6 flex gap-2"><i class="fa-solid fa-envelope size-1 mr-4 mt-1"></i> <span class="text-[#FF6200]">romerojanssen09@gmail.com</span></p>
-                                    <p class="fs-6 flex gap-2"><i class="fa-solid fa-location-dot size-1 mr-4 mt-1"></i> <span class="text-[#FF6200]">Bacolod City, 6100</span></p>
-                                </div>
+                    <div class="flex flex-col items-center gap-4">
+                        <div class="flex gap-6 justify-center mb-4">
+                            <a href="mailto:your.email@example.com" class="text-white hover:text-[#FF6200] text-2xl" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                            <a href="https://github.com/yourusername" target="_blank" rel="noopener" class="text-white hover:text-[#FF6200] text-2xl" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener" class="text-white hover:text-[#FF6200] text-2xl" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                        <form class="w-full max-w-md bg-[#2D2D2D] rounded-lg p-6 shadow">
+                            <div class="mb-4">
+                                <label for="name" class="block mb-2">Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-3 py-2 rounded bg-[#444] border border-[#FF6200] focus:outline-none focus:border-[#ff8533]" required>
                             </div>
-                        </div>
+                            <div class="mb-4">
+                                <label for="email" class="block mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-3 py-2 rounded bg-[#444] border border-[#FF6200] focus:outline-none focus:border-[#ff8533]" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="phone" class="block mb-2">Phone</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-3 py-2 rounded bg-[#444] border border-[#FF6200] focus:outline-none focus:border-[#ff8533]" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block mb-2">Message</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 rounded bg-[#444] border border-[#FF6200] focus:outline-none focus:border-[#ff8533]" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-[#FF6200] text-white py-2 rounded hover:bg-[#ff8533] transition">Send Message</button>
+                        </form>
                     </div>
-                    <form class="w-[100%] px-[20px]">
-                        <div class="mb-3"> 
-                            <label for="name" class="form-label">Your Name</label>
-                            <input type="text" class="form-control outline-none" id="name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Your Email</label>
-                            <input type="email" class="form-control" id="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="phone" class="form-label">Your Phone</label>
-                            <input type="tel" class="form-control" id="phone" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Your Message</label>
-                            <textarea class="form-control resize-none" id="message" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="btn bg-[#FF6200] text-sky-50 border-orange-600 hover:border-[#FF6200] w-[100%] md:w-[50%] lg:w-[40%]">Submit
-                            Message</button>
-                    </form>
                 </div>
             </div>
         </section>
@@ -318,6 +312,37 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script>
+        // Highlight nav link when section is in view
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+        function onScroll() {
+            let scrollPos = window.scrollY + 120; // offset for fixed nav
+            sections.forEach(section => {
+                if (
+                    scrollPos >= section.offsetTop &&
+                    scrollPos < section.offsetTop + section.offsetHeight
+                ) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('nav-active');
+                        if (link.getAttribute('href') === `#${section.id}`) {
+                            link.classList.add('nav-active');
+                        }
+                    });
+                }
+            });
+        }
+        window.addEventListener('scroll', onScroll);
+        // Also handle click for instant feedback
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                navLinks.forEach(l => l.classList.remove('nav-active'));
+                this.classList.add('nav-active');
+            });
+        });
+        // Initial highlight
+        onScroll();
+    </script>
 </body>
 
 </html>
