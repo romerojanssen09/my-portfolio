@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourmet Coffee</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="coffee-cup-clipart-generative-ai-png.webp">
+</head>
+
+<body class="bg-gradient-to-b from-yellow-100 via-white to-yellow-200 min-h-screen font-sans">
+    <header id="header" class="fixed top-0 left-0 w-full z-50 bg-white shadow-lg border-b border-yellow-200">
+        <div class="max-w-6xl mx-auto flex justify-between items-center py-3 px-4 md:px-6">
+            <div id="header-div" class="flex items-center gap-3">
+                <img id="header-img" src="coffee-cup-clipart-generative-ai-png.webp" alt="Logo" class="w-10 h-10 sm:w-12 sm:h-12 drop-shadow-lg">
+                <span class="text-lg sm:text-2xl font-extrabold text-yellow-900 tracking-tight">Gourmet Coffee</span>
+            </div>
+            <!-- Hamburger (mobile) -->
+            <button id="nav-toggle" class="md:hidden text-yellow-900 focus:outline-none text-2xl sm:text-3xl" aria-label="Open Menu">
+                <svg class="w-7 h-7 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <!-- Nav links -->
+            <nav id="nav-bar" class="hidden md:flex gap-3 sm:gap-6">
+                <a class="nav-link text-yellow-900 font-semibold hover:text-yellow-700 transition px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-yellow-400" href="#features">Features</a>
+                <a class="nav-link text-yellow-900 font-semibold hover:text-yellow-700 transition px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-yellow-400" href="#video2">Watch Video</a>
+                <a class="nav-link text-yellow-900 font-semibold hover:text-yellow-700 transition px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-yellow-400" href="#pricing">Pricing</a>
+            </nav>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-yellow-200 shadow-lg">
+            <nav class="flex flex-col gap-1 py-3 px-4">
+                <a class="nav-link text-yellow-900 font-semibold hover:text-yellow-700 transition py-2 px-2 rounded focus:outline-none focus:ring-2 focus:ring-yellow-400" href="#features">Features</a>
+                <a class="nav-link text-yellow-900 font-semibold hover:text-yellow-700 transition py-2 px-2 rounded focus:outline-none focus:ring-2 focus:ring-yellow-400" href="#video2">Watch Video</a>
+                <a class="nav-link text-yellow-900 font-semibold hover:text-yellow-700 transition py-2 px-2 rounded focus:outline-none focus:ring-2 focus:ring-yellow-400" href="#pricing">Pricing</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-20 sm:pt-24">
+        <section id="hero" class="flex flex-col items-center justify-center text-center py-16 sm:py-20 bg-gradient-to-r from-yellow-50 via-yellow-100 to-yellow-200 px-4">
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-yellow-900 mb-6 drop-shadow leading-tight">Experience the Richness of <span class="text-yellow-700">Gourmet Coffee</span></h1>
+            <form id="form" action="https://www.freecodecamp.com/email-submit" class="flex flex-col sm:flex-row gap-3 items-center mt-4 w-full max-w-xl">
+                <input id="email" type="email" placeholder="Enter your email address" name="email" class="px-4 py-2 rounded-lg border-2 border-yellow-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 w-full sm:w-72 text-yellow-900">
+                <input id="submit" type="submit" value="GET STARTED" class="px-6 py-2 rounded-lg bg-yellow-700 text-white font-bold hover:bg-yellow-800 transition cursor-pointer shadow w-full sm:w-auto">
+            </form>
+        </section>
+
+        <section id="features" class="py-10 sm:py-16 bg-white px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl sm:text-3xl font-bold text-center text-yellow-900 mb-8 sm:mb-12">Features</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+                    <div class="flex flex-col items-center p-6 bg-yellow-50 rounded-xl shadow hover:shadow-lg transition">
+                        <span class="text-4xl sm:text-5xl mb-3 sm:mb-4">☕</span>
+                        <h3 class="text-lg sm:text-xl font-semibold mb-2 text-yellow-800">Premium Quality Beans</h3>
+                        <p class="text-yellow-700 text-sm sm:text-base">We source our coffee beans from the finest farms around the world, ensuring a rich and flavorful experience.</p>
+                    </div>
+                    <div class="flex flex-col items-center p-6 bg-yellow-50 rounded-xl shadow hover:shadow-lg transition">
+                        <span class="text-4xl sm:text-5xl mb-3 sm:mb-4">🚚</span>
+                        <h3 class="text-lg sm:text-xl font-semibold mb-2 text-yellow-800">Fast Delivery</h3>
+                        <p class="text-yellow-700 text-sm sm:text-base">Enjoy quick delivery to your doorstep, so you can savor your coffee without delay.</p>
+                    </div>
+                    <div class="flex flex-col items-center p-6 bg-yellow-50 rounded-xl shadow hover:shadow-lg transition">
+                        <span class="text-4xl sm:text-5xl mb-3 sm:mb-4">✅</span>
+                        <h3 class="text-lg sm:text-xl font-semibold mb-2 text-yellow-800">100% Satisfaction Guarantee</h3>
+                        <p class="text-yellow-700 text-sm sm:text-base">If you're not completely satisfied, we offer a full refund within 30 days of purchase.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="video2" class="py-10 sm:py-16 bg-gradient-to-r from-yellow-100 via-white to-yellow-200 px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-2xl sm:text-3xl font-bold text-yellow-900 mb-6 sm:mb-8">Watch Our Coffee Brewing Process</h2>
+                <div class="relative pb-[56.25%] h-0 overflow-hidden rounded-xl shadow-lg">
+                    <iframe src="https://www.youtube.com/embed/example" id="video" frameborder="0" allowfullscreen class="absolute top-0 left-0 w-full h-full"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="py-10 sm:py-16 bg-white px-4">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-2xl sm:text-3xl font-bold text-center text-yellow-900 mb-8 sm:mb-12">Pricing</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+                    <div class="bg-yellow-50 rounded-xl shadow flex flex-col items-center p-6 sm:p-8 hover:scale-105 hover:shadow-2xl transition">
+                        <h3 class="text-lg sm:text-xl font-bold text-yellow-800 mb-2">Single Origin Coffee</h3>
+                        <p class="text-2xl sm:text-3xl font-extrabold text-yellow-700 mb-2">$15</p>
+                        <p class="text-yellow-700 text-sm sm:text-base mb-4">Experience the unique flavors of our single origin coffee.</p>
+                        <button class="px-4 sm:px-6 py-2 rounded-lg bg-yellow-700 text-white font-bold hover:bg-yellow-800 transition w-full sm:w-auto">Select</button>
+                    </div>
+                    <div class="bg-yellow-50 rounded-xl shadow flex flex-col items-center p-6 sm:p-8 hover:scale-105 hover:shadow-2xl transition">
+                        <h3 class="text-lg sm:text-xl font-bold text-yellow-800 mb-2">Blended Coffee</h3>
+                        <p class="text-2xl sm:text-3xl font-extrabold text-yellow-700 mb-2">$12</p>
+                        <p class="text-yellow-700 text-sm sm:text-base mb-4">A perfect blend of flavors for a balanced cup.</p>
+                        <button class="px-4 sm:px-6 py-2 rounded-lg bg-yellow-700 text-white font-bold hover:bg-yellow-800 transition w-full sm:w-auto">Select</button>
+                    </div>
+                    <div class="bg-yellow-50 rounded-xl shadow flex flex-col items-center p-6 sm:p-8 hover:scale-105 hover:shadow-2xl transition">
+                        <h3 class="text-lg sm:text-xl font-bold text-yellow-800 mb-2">Espresso Roast</h3>
+                        <p class="text-2xl sm:text-3xl font-extrabold text-yellow-700 mb-2">$18</p>
+                        <p class="text-yellow-700 text-sm sm:text-base mb-4">Rich and bold, perfect for espresso lovers.</p>
+                        <button class="px-4 sm:px-6 py-2 rounded-lg bg-yellow-700 text-white font-bold hover:bg-yellow-800 transition w-full sm:w-auto">Select</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="py-8 bg-yellow-900 text-yellow-50 text-center mt-8 sm:mt-12 px-4">
+            <div class="max-w-4xl mx-auto">
+                <p class="mb-2 text-sm sm:text-base">&copy; 2025 Gourmet Coffee. All rights reserved.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-6 mt-2">
+                    <a href="#" class="hover:text-yellow-300 transition">Facebook</a>
+                    <a href="#" class="hover:text-yellow-300 transition">Instagram</a>
+                    <a href="#" class="hover:text-yellow-300 transition">Twitter</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script>
+        // Nav active effect
+        function getNavLinks() {
+            return document.querySelectorAll('.nav-link');
+        }
+        const sections = ['features', 'video2', 'pricing'].map(id => document.getElementById(id));
+        function onScroll() {
+            let scrollPos = window.scrollY + 130;
+            getNavLinks().forEach(l => l.classList.remove('text-yellow-700', 'font-bold', 'underline'));
+            sections.forEach((section, idx) => {
+                if (
+                    scrollPos >= section.offsetTop &&
+                    scrollPos < section.offsetTop + section.offsetHeight
+                ) {
+                    getNavLinks()[idx].classList.add('text-yellow-700', 'font-bold', 'underline');
+                }
+            });
+        }
+        window.addEventListener('scroll', onScroll);
+        getNavLinks().forEach((link, idx) => {
+            link.addEventListener('click', function () {
+                getNavLinks().forEach(l => l.classList.remove('text-yellow-700', 'font-bold', 'underline'));
+                this.classList.add('text-yellow-700', 'font-bold', 'underline');
+                // Close mobile menu on click
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+        onScroll();
+        // Hamburger menu toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        navToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

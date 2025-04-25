@@ -1,0 +1,157 @@
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+#header-img{
+    width: 40px;
+    margin-left: 10px;
+    transition: filter 0.3s;
+    filter: brightness(1.2);
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+    height: 40px;
+}
+
+#header-div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#header-div p {
+    margin: 0;
+    color: #6f4c3e;
+    font-weight: 900;
+}
+
+#nav-bar {
+    display: flex;
+}
+
+.nav-link {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #6f4c3e;
+    font-weight: 800;
+}
+
+#hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #f0e5d8;
+}
+
+#hero h1 {
+    margin-bottom: 20px;
+}
+
+#hero #email {
+    padding: 10px;
+    width: 300px;
+    margin-right: 10px;
+}
+
+#submit {
+    padding: 10px 20px;
+    background-color: #6f4c3e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    
+}
+
+#submit:active {
+    background-color: #ffffff;
+    color: #6f4c3e;
+    border: 1px solid #6f4c3e;
+}
+
+#features {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+.icon {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+#video2 {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#pricing {
+    padding: 50px 20px;
+    background-color: #f0e5d8;
+    text-align: center;
+}
+
+.pricing-table {
+    display: flex;
+    justify-content: space-around;
+}
+
+.pricing-item {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 30%;
+}
+
+@media (max-width: 600px) {
+    #nav-bar {
+        flex-direction: column;
+    }
+
+    .pricing-table {
+        flex-direction: column;
+    }
+
+    .pricing-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.pricing-item button{
+    padding: 10px 20px;
+    background-color: #6f4c3e;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.pricing-item button:active{
+    background-color: #ffffff;
+    color: #6f4c3e;
+    border: 1px solid #6f4c3e;
+}
